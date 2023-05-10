@@ -15,7 +15,7 @@ public class GameList {
     private Long id;
     private String name;
 
-    GameList() {}
+    public GameList() {}
 
     public GameList(Long id, String name) {
         this.id = id;
