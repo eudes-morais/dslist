@@ -1,6 +1,7 @@
 package com.eudes.dslistbackend.dto;
 
 import com.eudes.dslistbackend.entities.Game;
+import com.eudes.dslistbackend.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -18,6 +19,14 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
     public Long getId() {
